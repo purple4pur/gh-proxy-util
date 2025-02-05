@@ -45,7 +45,7 @@ func modifyResponse(r *http.Response) error {
 		b = buf
 	}
 
-	b = bytes.ReplaceAll(b, []byte("=\"https://github.com"), []byte("=\"https://github." + HOSTNAME))
+	b = bytes.ReplaceAll(b, []byte("=\"https://github.com"), []byte("=\"https://ghproxy." + HOSTNAME))
 	b = bytes.ReplaceAll(b, []byte("=\"https://github.githubassets.com"), []byte("=\"https://github-githubassets." + HOSTNAME))
 	b = bytes.ReplaceAll(b, []byte("=\"https://avatars.githubusercontent.com"), []byte("=\"https://avatars-githubusercontent." + HOSTNAME))
 
